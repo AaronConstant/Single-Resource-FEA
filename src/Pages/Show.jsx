@@ -1,11 +1,14 @@
-import React from 'react';
+import HerbDetails from '../Components/HerbDetails'
+
 
 const Show = () => {
     return (
-        <div>
-            
+        <div className='show'>
+            Delve into the Deets
+            <HerbDetails />
         </div>
-    );
-};
+    )
+}
 
-export default Show;
+
+export default Show

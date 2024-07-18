@@ -1,0 +1,57 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0 10px 10px;
+    height: 5em;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 100vw;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: gray;
+}
+
+.navbar_hamburger {
+    margin-right: 20px;
+}
+
+.navbar_search {
+    margin-right: 20px;
+}
+
+.navbar_converter {
+    margin-right: 310px;
+}
+
+.navbar_new {
+    margin-left: 310px;
+}
+
+.navbar_login {
+    margin-left: 20px;
+}
+
+.navbar_cart {
+    margin-left: 20px;
+}
+
+.navbar_logo {
+    font-size: 30px;
+}
+
+.navbar_trademark {
+    font-size: x-small;
+    margin-bottom: 12px;
+}

@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const LogIn = () => {
+const Studies = () => {
     return (
         <div>
             
@@ -10,4 +10,4 @@ const LogIn = () => {
 }
 
 
-export default LogIn
+export default Studies

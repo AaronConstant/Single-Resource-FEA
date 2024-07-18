@@ -1,11 +1,13 @@
-import React from 'react';
+import React from 'react'
+
 
 const New = () => {
     return (
         <div>
             
         </div>
-    );
-};
+    )
+}
 
-export default New;
+
+export default New
