@@ -1,11 +1,26 @@
 import { useState, useEffect } from 'react'
-import { Link, useParams, useNavigate } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
+const API = import.meta.env.VITE_API_URL
 
 const HerbDetails = () => {
+    const { id } = useParams()
+    const [herbDetails, setHerbDetails] = useState([])
+
+    
+    useEffect(() => {
+        fetch(`${API}/herbs/${id}`)
+        .then(res => res.json())
+        .then(res => {
+            setHerbDetails(res)
+        })
+        .catch(err => console.error(err))
+    }, [])
+
+
     return (
-        <div>
-            
+        <div className='herb_details'>
+            {herbDetails.name}
         </div>
     )
 }

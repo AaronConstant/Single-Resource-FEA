@@ -1,3 +1,22 @@
+main {
+    position: relative;
+}
+
 img {
     width: 100vw;
+    height: auto;
+}
+
+.home_btn {
+    border: none;
+    padding: 20px;
+    border-radius: 1em;
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    cursor: pointer;
+}
+
+.home_btn:hover {
+    background-color: tan;
 }

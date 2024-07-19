@@ -25,18 +25,21 @@ a:hover {
 
 .navbar_hamburger {
     margin-right: 20px;
+    cursor: pointer;
 }
 
 .navbar_search {
     margin-right: 20px;
+    cursor: pointer;
 }
 
 .navbar_converter {
-    margin-right: 310px;
+    margin-right: 290px;
+    cursor: pointer;
 }
 
 .navbar_new {
-    margin-left: 310px;
+    margin-left: 290px;
 }
 
 .navbar_login {
@@ -48,7 +51,7 @@ a:hover {
 }
 
 .navbar_logo {
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .navbar_trademark {

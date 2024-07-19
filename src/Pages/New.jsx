@@ -1,10 +1,10 @@
-import React from 'react'
+import HerbNewForm from '../Components/HerbNewForm'
 
 
 const New = () => {
     return (
         <div>
-            
+            <HerbNewForm />
         </div>
     )
 }

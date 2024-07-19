@@ -1,10 +1,10 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
 
 
-const Herb = () => {
+const Herb = ({ herb, id }) => {
     return (
-        <div>
-            
+        <div className='herb' key={id}>
+            <Link to={`/herbs/${id}`}>{herb.name}</Link>
         </div>
     )
 }
