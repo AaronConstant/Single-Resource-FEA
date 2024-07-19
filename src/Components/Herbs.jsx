@@ -24,4 +24,4 @@ const Herbs = () => {
 }
 
 
-export default Herbs
+export default Herbs;
