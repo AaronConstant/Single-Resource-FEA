@@ -16,11 +16,11 @@ const HerbEditForm = () => {
         element: '',
         tea: false,
         poisonous: false,
-        stock: ''
+        stock: 0
     })
 
     const updateHerb = () => {
-        fetch(`${API}/herbs/${id}`, {
+        fetch(`${API}/${id}`, {
             method: 'PUT',
             body: JSON.stringify(herb),
             headers: {
@@ -50,7 +50,7 @@ const HerbEditForm = () => {
     }
 
     useEffect(() => {
-        fetch(`${API}/herbs/${id}`)
+        fetch(`${API}/${id}`)
         .then(res => res.json())
         .then(res => {
             setHerb(res)
@@ -155,7 +155,7 @@ const HerbEditForm = () => {
                     <br/>
                     <button type='submit'>Edit Herb</button>
                     <Link to={`/herbs/${id}`}>
-                        <button>Nevermind</button>
+                        <button>Back</button>
                     </Link>
                 </fieldset>
             </form>

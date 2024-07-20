@@ -22,7 +22,7 @@ const Show = () => {
             <HerbDetails />
             <Link to={`/herbs`}><button>Back</button></Link>
             <Link to={`/herbs/${id}/edit`}><button>Edit</button></Link>
-            <button onClick={handleDelete}>Delete</button>
+            <button onClick={ handleDelete }>Delete</button>
         </div>
     )
 }

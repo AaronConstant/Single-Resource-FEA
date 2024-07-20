@@ -150,7 +150,7 @@ const HerbNewForm = () => {
                     <br/>
                     <button type='submit'>Add to Apothecary</button>
                     <Link to={`/herbs`}>
-                        <button>Nevermind</button>
+                        <button>Back</button>
                     </Link>
                 </fieldset>
             </form>

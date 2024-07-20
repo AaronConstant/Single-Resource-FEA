@@ -7,7 +7,7 @@ const Herbs = () => {
     const [herbs, setHerbs] = useState([])
 
     useEffect(() => {
-        fetch(`${API}/herbs`)
+        fetch(API)
         .then(res => res.json())
         .then(res => {setHerbs(res)})
         .catch(err => console.log(err))
