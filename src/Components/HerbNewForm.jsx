@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useNavigate, Link, useParams } from 'react-router-dom'
-import {format, parseISO } from 'date-fns'
+// import {format, parseISO } from 'date-fns'
 import { v4 as uuidv4 } from 'uuid'
 import '../Styles/new.scss'
 
@@ -13,9 +13,9 @@ const HerbNewForm = () => {
     const [herb, setHerb] = useState({
         id: uuidv4(),
         name: '',
-        date: '',
+        entry_date: '',
         nutrients: '',
-        astrology: '',
+        astrology_sign: '',
         chakra: '',
         element: '',
         tea: false,
@@ -23,7 +23,8 @@ const HerbNewForm = () => {
         stock: ''
     })
 
-    const addHerb = () => {
+    const addHerb = (herb) => {
+        console.log(herb)
         fetch(API, {
             method: 'POST',
             body: JSON.stringify(herb),
@@ -33,39 +34,42 @@ const HerbNewForm = () => {
         })
         .then(res => res.json())
         .then(res => {
+            console.log('Server response:', res)
             navigate(`/herbs/${id}`)
         })
         .catch(err => console.error(err))
     }
 
     const handleText = (e) => {
-        setHerb({ ...herb, [e.target.id]: e.target.value })
+        setHerb(prevHerb =>({ ...prevHerb, [e.target.id]: e.target.value }))
+        console.log(herb)
     }
 
     const handleTeaCheckBox = () => {
-        setHerb({ ...herb, tea: !herb.tea })
-    }
+        setHerb(prevHerb => ({ ...prevHerb, tea: !prevHerb.tea }));
+    };
 
     const handlePoisonousCheckBox = () => {
-        setHerb({ ...herb, poisonous: !herb.poisonous})
-    }
+        setHerb(prevHerb => ({ ...prevHerb, poisonous: !prevHerb.poisonous }));
+    };
+    
+    // const handleDateFormatting = (e) => {
+    //     const parsedDate = parseISO(e)
+    //     const formattingDate = format(parsedDate, 'yyyy-MM-dd')
+
+    //     return formattingDate;
+    // }
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        // console.log(herb.entry_date)
+        // const newDateFormatted = handleDateFormatting(herb.entry_date)
+        // const herbWithNewDate = {...herb, entry_date : newDateFormatted }
 
-        const newDateFormatted = handleDateFormatting(herb.entry_date)
-        const herbWithNewDate = {...herb, entry_date : newDateFormatted }
-
-        setHerb(herbWithNewDate)
-        addHerb(herbWithNewDate)
+        // setHerb(herbWithNewDate)
+        addHerb(herb)
     }
 
-    const handleDateFormatting = (e) => {
-        const parsedDate = parseISO(e)
-        const formattingDate = format(parsedDate, 'yyyy-MM-dd')
-
-        return formattingDate;
-    }
 
 
     return (
@@ -83,9 +87,9 @@ const HerbNewForm = () => {
                         required
                     />
                     <br/>
-                    <label htmlFor='date'>Date:</label>
+                    <label htmlFor='entry_date'>Date:</label>
                     <input
-                        id='date'
+                        id='entry_date'
                         value={herb.entry_date}
                         type='date'
                         onChange={handleText}
@@ -103,9 +107,9 @@ const HerbNewForm = () => {
                         required
                     />
                     <br/>
-                    <label htmlFor='astrology'>Astrological:</label>
+                    <label htmlFor='astrology_sign'>Astrological:</label>
                     <input
-                        id='astrology'
+                        id='astrology_sign'
                         value={herb.astrology_sign}
                         type='text'
                         onChange={handleText}
@@ -160,7 +164,7 @@ const HerbNewForm = () => {
                         type='checkbox'
                         onChange={handlePoisonousCheckBox}
                         checked={herb.poisonous}
-                        required
+                        
                     />
                     <br/>
                     <br/>
