@@ -9,7 +9,8 @@ import { BsCurrencyExchange } from 'react-icons/bs'
 import '../Styles/navbar.scss'
 
 
-const NavBar = () => {
+const NavBar = ({ herbdata }) => {
+
     return (
         <nav>
             <ul>

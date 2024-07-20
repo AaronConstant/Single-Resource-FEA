@@ -39,10 +39,13 @@ const HerbEditForm = () => {
         setHerb({ ...herb, [e.target.id]: e.target.value })
     }
 
-    const handleCheckBox = () => {
-        setHerb({ ...herb, tea: !herb.tea })
-        setHerb({ ...herb, poisonous: !herb.poisonous})
-    }
+    const handleTeaCheckBox = () => {
+        setHerb(prevHerb => ({ ...prevHerb, tea: !prevHerb.tea }));
+    };
+
+    const handlePoisonousCheckBox = () => {
+        setHerb(prevHerb => ({ ...prevHerb, poisonous: !prevHerb.poisonous }));
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -139,7 +142,7 @@ const HerbEditForm = () => {
                         id='tea'
                         name='tea'
                         type='checkbox'
-                        onChange={handleCheckBox}
+                        onChange={handleTeaCheckBox}
                         checked={herb.tea}
                     />
                     <br/>
@@ -148,7 +151,7 @@ const HerbEditForm = () => {
                         id='poisonous'
                         name='poisonous'
                         type='checkbox'
-                        onChange={handleCheckBox}
+                        onChange={handlePoisonousCheckBox}
                         checked={herb.poisonous}
                     />
                     <br/>

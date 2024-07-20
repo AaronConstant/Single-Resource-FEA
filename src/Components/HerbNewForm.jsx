@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { useNavigate, Link, useParams } from 'react-router-dom'
-// import {format, parseISO } from 'date-fns'
 import { v4 as uuidv4 } from 'uuid'
 import '../Styles/new.scss'
 
@@ -35,7 +34,7 @@ const HerbNewForm = () => {
         .then(res => res.json())
         .then(res => {
             console.log('Server response:', res)
-            navigate(`/herbs/${id}`)
+            navigate(`/herbs`)
         })
         .catch(err => console.error(err))
     }
@@ -53,20 +52,9 @@ const HerbNewForm = () => {
         setHerb(prevHerb => ({ ...prevHerb, poisonous: !prevHerb.poisonous }));
     };
     
-    // const handleDateFormatting = (e) => {
-    //     const parsedDate = parseISO(e)
-    //     const formattingDate = format(parsedDate, 'yyyy-MM-dd')
-
-    //     return formattingDate;
-    // }
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        // console.log(herb.entry_date)
-        // const newDateFormatted = handleDateFormatting(herb.entry_date)
-        // const herbWithNewDate = {...herb, entry_date : newDateFormatted }
-
-        // setHerb(herbWithNewDate)
         addHerb(herb)
     }
 

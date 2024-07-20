@@ -4,6 +4,7 @@ import '../Styles/home.scss'
 
 
 const Home = () => {
+    
     return (
         <main>
             <img className='home_image' src={ homeImage } alt='lush farm, farmhouse, and sunrise from the East'/>

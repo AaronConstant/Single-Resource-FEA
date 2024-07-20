@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 import './App.css'
 import Home from './Pages/Home'
 import Index from './Pages/Index'
@@ -15,11 +16,23 @@ import NavBar from './Components/NavBar'
 
 
 function App() {
+  const [herbdata, setHerbData] = useState()
+  const API = import.meta.env.VITE_API_URL
+
+  useEffect(() => {
+    fetch(API)
+    .then(res => res.json())
+    .then(res => {setHerbData(res)})
+    .catch(err => console.log(err))
+}, [])
+
+
+
 
   return (
       <div className='app-container'>
         <Header/>
-        <NavBar/>
+        <NavBar herbdata={herbdata}/>
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/herbs' element={<Index/>}/> 
