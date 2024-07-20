@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useNavigate, Link, useParams } from 'react-router-dom'
+import {format, parseISO } from 'date-fns'
 import { v4 as uuidv4 } from 'uuid'
 import '../Styles/new.scss'
 
@@ -23,7 +24,7 @@ const HerbNewForm = () => {
     })
 
     const addHerb = () => {
-        fetch(`${API}/herbs`, {
+        fetch(API, {
             method: 'POST',
             body: JSON.stringify(herb),
             headers: {
@@ -41,14 +42,29 @@ const HerbNewForm = () => {
         setHerb({ ...herb, [e.target.id]: e.target.value })
     }
 
-    const handleCheckBox = () => {
+    const handleTeaCheckBox = () => {
         setHerb({ ...herb, tea: !herb.tea })
+    }
+
+    const handlePoisonousCheckBox = () => {
         setHerb({ ...herb, poisonous: !herb.poisonous})
     }
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        addHerb()
+
+        const newDateFormatted = handleDateFormatting(herb.entry_date)
+        const herbWithNewDate = {...herb, entry_date : newDateFormatted }
+
+        setHerb(herbWithNewDate)
+        addHerb(herbWithNewDate)
+    }
+
+    const handleDateFormatting = (e) => {
+        const parsedDate = parseISO(e)
+        const formattingDate = format(parsedDate, 'yyyy-MM-dd')
+
+        return formattingDate;
     }
 
 
@@ -132,7 +148,7 @@ const HerbNewForm = () => {
                         id='tea'
                         name='tea'
                         type='checkbox'
-                        onChange={handleCheckBox}
+                        onChange={handleTeaCheckBox}
                         checked={herb.tea}
                         // required
                     />
@@ -142,7 +158,7 @@ const HerbNewForm = () => {
                         id='poisonous'
                         name='poisonous'
                         type='checkbox'
-                        onChange={handleCheckBox}
+                        onChange={handlePoisonousCheckBox}
                         checked={herb.poisonous}
                         required
                     />
