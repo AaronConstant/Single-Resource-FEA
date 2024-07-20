@@ -12,6 +12,7 @@ ul {
     align-items: center;
     padding: 0;
     width: 100vw;
+    position: relative;
 }
 
 a {
@@ -57,4 +58,15 @@ a:hover {
 .navbar_trademark {
     font-size: x-small;
     margin-bottom: 12px;
+}
+
+.search-results {
+    color: brown;
+    margin-top: 2px;
+    text-align: center;
+    width: auto;
+    border-radius: 20px;
+    background: white;
+    position: absolute;
+    box-shadow: 4px 4px 4px 1px rgb(210, 180, 140);
 }
