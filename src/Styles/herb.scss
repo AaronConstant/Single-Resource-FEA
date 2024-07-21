@@ -1,15 +1,26 @@
 .herb {
     display: grid;
+    background-color: rgba(159, 89, 14, 0.607);
     border: 2px solid black;
-    width: 50%;
+    border-radius: 25px;
+    padding: 10px;
+    text-align: center;
+    width: 30%;
+    gap: 10px;
     &__name {
-        font-size: 20px;
-        
-
+        font-size: 24px;
     }
+    &__info-display {
+            color: blue;
+        }
+
+    img {
+        display: grid;
+        width: 50%;
+        border-radius: 25%;
+        padding-left: 30px;
+    }
+
+    
 }
 
-
-.info-display {
-    color: blue;
-}

@@ -39,8 +39,6 @@ const NavBar = ({ herbdata }) => {
         setSearchView(prevSearchView => !prevSearchView);
     };
 
-    console.log(filtereddata)
-    console.log(searchEntry);
 
     return (
         <nav>
@@ -56,17 +54,21 @@ const NavBar = ({ herbdata }) => {
                 className="input-view"
                 style={{ display: searchview ? 'none' : 'block' }}
             />
-           <li className='search-results' style={{ display: searchview ? 'none' : 'block'}}>
+           <div className='search-results' style={{ display: searchview ? 'none' : 'block'}}>
                     {filtereddata && filtereddata.length > 0 && searchEntry ? (
-                        <div style={{ padding: searchview ? '0px' : '10px' }}>
-                        {filtereddata.map(herb => (
+                        <section style={{ padding: searchview ? '0px' : '10px' }}>
+                        {filtereddata.map((herb, idx) => (
+                            <Link to={`/herbs/${herb.id}`} onClick={searchview == false} key={idx}>
                             <p key={herb.id}>{herb.name}</p>
+                        
+                            </Link> 
                         ))}
-                    </div>
+                    </section>
                     ) : (
+
                         undefined
                     )}
-                </li>
+                </div>
                 
                 </li>
                 <li><BsCurrencyExchange className='navbar_converter'/></li>

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Herb from './Herb'
+import '../Styles/herbcardlayout.scss'
 
 const API = import.meta.env.VITE_API_URL
 

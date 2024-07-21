@@ -13,6 +13,7 @@ const HerbNewForm = () => {
         id: uuidv4(),
         name: '',
         entry_date: '',
+        pic: '',
         nutrients: '',
         astrology_sign: '',
         chakra: '',
@@ -75,7 +76,7 @@ const HerbNewForm = () => {
                         required
                     />
                     <br/>
-                    <label htmlFor='entry_date'>Date:</label>
+                    <label htmlFor='entry_date'>Date: </label>
                     <input
                         id='entry_date'
                         value={herb.entry_date}
@@ -85,7 +86,17 @@ const HerbNewForm = () => {
                         required
                     />
                     <br/>
-                    <label htmlFor='nutrients'>Nutrients:</label>
+                    <label htmlFor='pic'>Picture URL: </label>
+                    <input
+                        id='pic'
+                        value={herb.pic}
+                        type='text'
+                        onChange={handleText}
+                        placeholder="Picture URL"
+                        required
+                    />
+                    <br/>
+                    <label htmlFor='nutrients'>Nutrients: </label>
                     <input
                         id='nutrients'
                         value={herb.nutrients}
@@ -95,7 +106,7 @@ const HerbNewForm = () => {
                         required
                     />
                     <br/>
-                    <label htmlFor='astrology_sign'>Astrological:</label>
+                    <label htmlFor='astrology_sign'>Astrological: </label>
                     <input
                         id='astrology_sign'
                         value={herb.astrology_sign}
@@ -105,7 +116,7 @@ const HerbNewForm = () => {
                         required
                     />
                     <br/>
-                    <label htmlFor='chakra'>Chakra:</label>
+                    <label htmlFor='chakra'>Chakra: </label>
                     <input
                         id='chakra'
                         value={herb.chakra}
@@ -115,7 +126,7 @@ const HerbNewForm = () => {
                         required
                     />
                     <br/>
-                    <label htmlFor='element'>Element:</label>
+                    <label htmlFor='element'>Element: </label>
                     <input
                         id='element'
                         value={herb.element}
@@ -125,7 +136,6 @@ const HerbNewForm = () => {
                         required
                     />
                     <br/>
-                    <label htmlFor='stock'>Stock:</label>
                     <input
                         id='stock'
                         value={herb.stock}
@@ -135,7 +145,7 @@ const HerbNewForm = () => {
                         required
                     />
                     <br/>
-                    <label htmlFor='tea'>Tea:</label>
+                    <label htmlFor='tea'>Tea: </label>
                     <input
                         id='tea'
                         name='tea'
@@ -145,7 +155,7 @@ const HerbNewForm = () => {
                         // required
                     />
                     <br/>
-                    <label htmlFor='poisonous'>Poisonous:</label>
+                    <label htmlFor='poisonous'>Poisonous: </label>
                     <input
                         id='poisonous'
                         name='poisonous'
