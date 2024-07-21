@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 
+
 const API = import.meta.env.VITE_API_URL
 
 const HerbDetails = () => {
@@ -9,7 +10,7 @@ const HerbDetails = () => {
 
     
     useEffect(() => {
-        fetch(`${API}/herbs/${id}`)
+        fetch(`${API}/herbs/${id}`) 
         .then(res => res.json())
         .then(res => {
             setHerbDetails(res)
