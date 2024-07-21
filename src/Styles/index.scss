@@ -1,16 +1,19 @@
 .index {
     border-top: 1px solid rgb(244, 238, 231);
+    background: rgb(196, 123, 35);
+    background: linear-gradient(0deg, rgba(141, 88, 23, 0) 87%, rgba(221, 145, 69, 0.839) 100%);
 }
-
 .index__title {
     font-size: 40px;  
     color: rgb(66, 64, 64);
-    margin-left: 30px;
+    margin-left: 38px;
+    text-align: center;
 }
 
 .index__filter {
-    margin-left: 30px;
-    padding: 10px 35px;
+    margin-top: 10px;
+    margin-left: 40%;
+    padding: 10px 45px;
     border-radius: 2em;
     border: none;
     background-color: tan;
@@ -18,11 +21,12 @@
 }
 
 .index__sort {
-    margin-left: 30px;
+    margin-left: 28px;
     padding: 10px 60px;
     border-radius: 2em;
     border: none;
     color: rgb(56, 52, 52);
+
 }
 
 .index__total {

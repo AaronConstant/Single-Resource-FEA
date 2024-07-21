@@ -42,8 +42,6 @@ const NavBar = ({ herbdata }) => {
 
     return (
         <nav>
-            <ul>
-                <li><GiHamburgerMenu className='navbar_hamburger'/></li>
                 <li><FaSearch className='navbar_search' onClick={toggleSearchView}/>
                 
                 <input
@@ -71,7 +69,9 @@ const NavBar = ({ herbdata }) => {
                 </div>
                 
                 </li>
-                <li><BsCurrencyExchange className='navbar_converter'/></li>
+            <ul>
+                {/* <li><GiHamburgerMenu className='navbar_hamburger'/></li> */}
+                {/* <li><BsCurrencyExchange className='navbar_converter'/></li> */}
                 <li className='navbar_logo'><Link to='/'>AM APOTHECARY</Link></li>
                 {/* <li><Link to ='/herbs/studies'>Medicinal Studies</Link></li> */}
                 <li><Link to='/herbs/new'><GiMonsteraLeaf className='navbar_new'/></Link></li>

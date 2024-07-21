@@ -15,6 +15,7 @@ const Herb = ({ herb, id }) => {
                 <p>
                 { herb.astrology_sign }    
                 </p>
+                
             </div>
         </div>
     )

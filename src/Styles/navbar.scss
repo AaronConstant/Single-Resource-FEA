@@ -3,6 +3,9 @@ nav {
     justify-content: space-between;
     padding: 10px 0 10px 10px;
     height: 5em;
+    position: relative;
+    list-style-type: none;
+    text-decoration: none;
 }
 
 ul {
@@ -23,24 +26,29 @@ a {
 a:hover {
     color: gray;
 }
-
+.searchbar {
+    list-style-type: none;
+    position: absolute;
+}
 .navbar_hamburger {
     margin-right: 20px;
     cursor: pointer;
 }
 
 .navbar_search {
-    margin-right: 20px;
+    margin-left: 30px;
     cursor: pointer;
+    margin-top: 20px;
+
 }
 
-.navbar_converter {
-    margin-right: 290px;
-    cursor: pointer;
-}
+// .navbar_converter {
+//     margin-right: 290px;
+//     cursor: pointer;
+// }
 
 .navbar_new {
-    margin-left: 290px;
+    margin-left: 390px;
 }
 
 .navbar_login {
@@ -53,6 +61,7 @@ a:hover {
 
 .navbar_logo {
     font-size: 20px;
+    margin-left: 34%;
 }
 
 .navbar_trademark {
@@ -65,9 +74,16 @@ a:hover {
     margin-top: 2px;
     text-align: center;
     width: auto;
-    border-radius: 20px;
+    border-radius: 10px;
     background: white;
     position: absolute;
     box-shadow: 4px 4px 4px 1px rgb(210, 180, 140);
+    z-index: 1;
+}
+.input-view {
+    // margin-left: 34%;
+    position: absolute;
+    left: 64px;
+    bottom: 32px;
     z-index: 1;
 }

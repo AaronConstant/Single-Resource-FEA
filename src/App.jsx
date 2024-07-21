@@ -35,7 +35,7 @@ function App() {
         <NavBar herbdata={herbdata}/>
         <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path='/herbs' element={<Index/>}/> 
+          <Route path='/herbs' element={<Index herbdata={herbdata}/>}/> 
           {/* <Route path='/herbs/about' element={<About/>}/>  */}
           <Route path='/herbs/login' element={<LogIn/>}/> 
           {/* <Route path='/herbs/studies' element={<Studies/>}/> */}

@@ -16,10 +16,19 @@ const Herbs = () => {
 
 
     return (
+        <div className='container'>
+        <main className='container__content'>
+
         <div className='herbs'>
             {herbs.map((herb) => {
                 return <Herb key={herb.id} herb={herb} id={herb.id} />
             })}
+        </div>
+
+
+        </main>
+        
+        
         </div>
     )
 }
