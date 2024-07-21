@@ -39,9 +39,9 @@ const HerbEditForm = () => {
         setHerb({ ...herb, [e.target.id]: e.target.value })
     }
 
-    const handleCheckBox = () => {
-        setHerb({ ...herb, tea: !herb.tea })
-        setHerb({ ...herb, poisonous: !herb.poisonous})
+    const handleCheckBox = (e) => {
+        console.log(e)
+        setHerb({...herb, [e.target.name]: !herb[e.target.name] })
     }
 
     const handleSubmit = (e) => {
@@ -81,7 +81,6 @@ const HerbEditForm = () => {
                         type='date'
                         onChange={handleText}
                         placeholder="Today's Date"
-                        required
                     />
                     <br/>
                     <label htmlFor='nutrients'>Nutrients:</label>
