@@ -10,7 +10,7 @@ const Herb = ({ herb, id }) => {
             <Link to={`/herbs/${id}`}>{herb.name}</Link>
 
             </p>
-            <img src={herb.pic} alt="Herb img" />
+            <img className='herb__img' src={herb.pic} alt="Herb img" />
             <div className="herb__info-display">
                 <p>
                 { herb.astrology_sign }    
