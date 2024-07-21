@@ -41,9 +41,8 @@ const HerbNewForm = () => {
         setHerb({ ...herb, [e.target.id]: e.target.value })
     }
 
-    const handleCheckBox = () => {
-        setHerb({ ...herb, tea: !herb.tea })
-        setHerb({ ...herb, poisonous: !herb.poisonous})
+    const handleCheckBox = (e) => {
+        setHerb({...herb, [e.target.name]: !herb[e.target.name] })
     }
 
     const handleSubmit = (e) => {

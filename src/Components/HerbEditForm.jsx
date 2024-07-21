@@ -40,7 +40,6 @@ const HerbEditForm = () => {
     }
 
     const handleCheckBox = (e) => {
-        console.log(e)
         setHerb({...herb, [e.target.name]: !herb[e.target.name] })
     }
 
