@@ -5,7 +5,7 @@ import '../Styles/header.scss'
 const Header = () => {
     return (
         <header>
-            <h3>FREE SHIPPING ON DOMESTIC ORDERS $75+</h3>
+            <h3 className='header__title'>FREE SHIPPING ON DOMESTIC ORDERS $75+</h3>
         </header>
     )
 }

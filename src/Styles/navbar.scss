@@ -2,10 +2,10 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 10px 0 10px 10px;
+
     height: 5em;
     position: relative;
     list-style-type: none;
-    text-decoration: none;
 }
 
 ul {
@@ -39,7 +39,6 @@ a:hover {
     margin-left: 30px;
     cursor: pointer;
     margin-top: 20px;
-
 }
 
 // .navbar_converter {

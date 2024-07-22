@@ -44,14 +44,10 @@ const HerbNewForm = () => {
         console.log(herb)
     }
 
-    const handleTeaCheckBox = () => {
-        setHerb(prevHerb => ({ ...prevHerb, tea: !prevHerb.tea }));
-    };
+    const handleCheckBox = (e) => {
+        setHerb({...herb, [e.target.name]: !herb[e.target.name] })
+    }
 
-    const handlePoisonousCheckBox = () => {
-        setHerb(prevHerb => ({ ...prevHerb, poisonous: !prevHerb.poisonous }));
-    };
-    
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -149,7 +145,7 @@ const HerbNewForm = () => {
                         id='tea'
                         name='tea'
                         type='checkbox'
-                        onChange={handleTeaCheckBox}
+                        onChange={handleCheckBox}
                         checked={herb.tea}
                         // required
                     />
@@ -159,7 +155,7 @@ const HerbNewForm = () => {
                         id='poisonous'
                         name='poisonous'
                         type='checkbox'
-                        onChange={handlePoisonousCheckBox}
+                        onChange={handleCheckBox}
                         checked={herb.poisonous}
                         
                     />
