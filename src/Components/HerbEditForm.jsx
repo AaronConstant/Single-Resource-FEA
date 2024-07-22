@@ -9,9 +9,10 @@ const HerbEditForm = () => {
 
     const [herb, setHerb] = useState({
         name: '',
-        date: '',
+        entry_date: '',
+        pic: '',
         nutrients: '',
-        astrology: '',
+        astrology_sign: '',
         chakra: '',
         element: '',
         tea: false,
@@ -19,8 +20,9 @@ const HerbEditForm = () => {
         stock: ''
     })
 
-    const updateHerb = () => {
-        fetch(`${API}/herbs/${id}`, {
+    const updateHerb = async () => {
+        
+        fetch(`${API}/${id}`, {
             method: 'PUT',
             body: JSON.stringify(herb),
             headers: {
@@ -49,7 +51,7 @@ const HerbEditForm = () => {
     }
 
     useEffect(() => {
-        fetch(`${API}/herbs/${id}`)
+        fetch(`${API}/${id}`)
         .then(res => res.json())
         .then(res => {
             setHerb(res)
@@ -80,6 +82,18 @@ const HerbEditForm = () => {
                         type='date'
                         onChange={handleText}
                         placeholder="Today's Date"
+                        required
+                        />
+                    <br/>
+                    <label htmlFor='pic'>Picture URL: </label>
+                    <input
+                        id='pic'
+                        value={herb.pic}
+                        type='text'
+                        onChange={handleText}
+                        placeholder="Picture URL"
+                        required
+
                     />
                     <br/>
                     <label htmlFor='nutrients'>Nutrients:</label>
@@ -151,9 +165,9 @@ const HerbEditForm = () => {
                     />
                     <br/>
                     <br/>
-                    <button type='submit'>Edit Herb</button>
+                    <button type='submit'>Save Changes</button>
                     <Link to={`/herbs/${id}`}>
-                        <button>Nevermind</button>
+                        <button>Back</button>
                     </Link>
                 </fieldset>
             </form>

@@ -3,13 +3,15 @@ import { IoFilter } from 'react-icons/io5'
 import { IoIosArrowDown } from 'react-icons/io'
 import '../Styles/index.scss'
 
-const Index = () => {
+const Index = ({herbdata}) => {
     return (
         <div className='index'>
-            <h2 className='index__title'>Apothecary</h2>
-            <button className='index__filter'><IoFilter className='filter_icon'/>Filter</button>
-            <button className='index__sort'>Sort By<IoIosArrowDown className='sort_arrow'/></button>
-            <h5 className='index__total'>3 products</h5>
+
+            <h2 className='index__title'>Catalog</h2>
+            <button className='index__filter'>FILTER</button>
+            <button className='index__sort'>SORT BY</button>
+            <h5 className='index__total'>{`${3} products`}</h5>
+
             <Herbs className='index__products'/>
         </div>
     )

@@ -2,7 +2,10 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 10px 0 10px 10px;
-    height: 4.2em;
+
+    height: 5em;
+    position: relative;
+    list-style-type: none;
 }
 
 ul {
@@ -12,6 +15,7 @@ ul {
     align-items: center;
     padding: 0;
     width: 100vw;
+    position: relative;
 }
 
 a {
@@ -22,24 +26,28 @@ a {
 a:hover {
     color: gray;
 }
-
+.searchbar {
+    list-style-type: none;
+    position: absolute;
+}
 .navbar_hamburger {
     margin-right: 20px;
     cursor: pointer;
 }
 
 .navbar_search {
-    margin-right: 20px;
+    margin-left: 30px;
     cursor: pointer;
+    margin-top: 20px;
 }
 
-.navbar_converter {
-    margin-right: 250px;
-    cursor: pointer;
-}
+// .navbar_converter {
+//     margin-right: 290px;
+//     cursor: pointer;
+// }
 
 .navbar_new {
-    margin-left: 250px;
+    margin-left: 390px;
 }
 
 .navbar_login {
@@ -52,9 +60,29 @@ a:hover {
 
 .navbar_logo {
     font-size: 20px;
+    margin-left: 34%;
 }
 
 .navbar_trademark {
     font-size: x-small;
     margin-bottom: 12px;
+}
+
+.search-results {
+    color: brown;
+    margin-top: 2px;
+    text-align: center;
+    width: auto;
+    border-radius: 10px;
+    background: white;
+    position: absolute;
+    box-shadow: 4px 4px 4px 1px rgb(210, 180, 140);
+    z-index: 1;
+}
+.input-view {
+    // margin-left: 34%;
+    position: absolute;
+    left: 64px;
+    bottom: 32px;
+    z-index: 1;
 }

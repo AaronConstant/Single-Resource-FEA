@@ -10,7 +10,8 @@ const HerbDetails = () => {
 
     
     useEffect(() => {
-        fetch(`${API}/herbs/${id}`) 
+
+        fetch(`${API}/${id}`)
         .then(res => res.json())
         .then(res => {
             setHerbDetails(res)
@@ -21,7 +22,7 @@ const HerbDetails = () => {
 
     return (
         <div className='herb_details'>
-            {herbDetails.name}
+            { herbDetails.name }
         </div>
     )
 }

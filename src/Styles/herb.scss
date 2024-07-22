@@ -1,7 +1,36 @@
 .herb {
-    width: 250px;
-    height: 335px;
-    background-color: tan;
+    display: grid;
+    background-color: rgba(159, 89, 14, 0.568);
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    align-content: center;
+    width: 14%;
+    box-shadow: 4px 4px 14px 0px rgb(99, 76, 47);
+    
+    &__name {
+        font-size: 24px;
+        font-family: fantasy;
+    }
+
+    &__info-display {
+        color: blue;
+    }
+
+    &__img {
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // width: 50%;
+        // border-radius: 25%;
+        // margin: 0 auto;
+        border: 2px solid gray;
+        width: 110px;
+        height: 140px; 
+        border-radius: 50%; 
+        object-fit: cover; 
+    }
 }
+

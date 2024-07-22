@@ -12,9 +12,10 @@ const HerbNewForm = () => {
     const [herb, setHerb] = useState({
         id: uuidv4(),
         name: '',
-        date: '',
+        entry_date: '',
+        pic: '',
         nutrients: '',
-        astrology: '',
+        astrology_sign: '',
         chakra: '',
         element: '',
         tea: false,
@@ -22,8 +23,8 @@ const HerbNewForm = () => {
         stock: ''
     })
 
-    const addHerb = () => {
-        fetch(`${API}/herbs`, {
+    const addHerb = (herb) => {
+        fetch(API, {
             method: 'POST',
             body: JSON.stringify(herb),
             headers: {
@@ -32,23 +33,27 @@ const HerbNewForm = () => {
         })
         .then(res => res.json())
         .then(res => {
-            navigate(`/herbs/${id}`)
+            console.log('Server response:', res)
+            navigate(`/herbs`)
         })
         .catch(err => console.error(err))
     }
 
     const handleText = (e) => {
-        setHerb({ ...herb, [e.target.id]: e.target.value })
+        setHerb(prevHerb =>({ ...prevHerb, [e.target.id]: e.target.value }))
+        console.log(herb)
     }
 
     const handleCheckBox = (e) => {
         setHerb({...herb, [e.target.name]: !herb[e.target.name] })
     }
 
+
     const handleSubmit = (e) => {
         e.preventDefault()
-        addHerb()
+        addHerb(herb)
     }
+
 
 
     return (
@@ -66,9 +71,9 @@ const HerbNewForm = () => {
                         required
                     />
                     <br/>
-                    <label htmlFor='date'>Date:</label>
+                    <label htmlFor='entry_date'>Date: </label>
                     <input
-                        id='date'
+                        id='entry_date'
                         value={herb.entry_date}
                         type='date'
                         onChange={handleText}
@@ -76,7 +81,17 @@ const HerbNewForm = () => {
                         required
                     />
                     <br/>
-                    <label htmlFor='nutrients'>Nutrients:</label>
+                    <label htmlFor='pic'>Picture URL: </label>
+                    <input
+                        id='pic'
+                        value={herb.pic}
+                        type='text'
+                        onChange={handleText}
+                        placeholder="Picture URL"
+                        required
+                    />
+                    <br/>
+                    <label htmlFor='nutrients'>Nutrients: </label>
                     <input
                         id='nutrients'
                         value={herb.nutrients}
@@ -86,9 +101,9 @@ const HerbNewForm = () => {
                         required
                     />
                     <br/>
-                    <label htmlFor='astrology'>Astrological:</label>
+                    <label htmlFor='astrology_sign'>Astrological: </label>
                     <input
-                        id='astrology'
+                        id='astrology_sign'
                         value={herb.astrology_sign}
                         type='text'
                         onChange={handleText}
@@ -96,7 +111,7 @@ const HerbNewForm = () => {
                         required
                     />
                     <br/>
-                    <label htmlFor='chakra'>Chakra:</label>
+                    <label htmlFor='chakra'>Chakra: </label>
                     <input
                         id='chakra'
                         value={herb.chakra}
@@ -106,7 +121,7 @@ const HerbNewForm = () => {
                         required
                     />
                     <br/>
-                    <label htmlFor='element'>Element:</label>
+                    <label htmlFor='element'>Element: </label>
                     <input
                         id='element'
                         value={herb.element}
@@ -116,7 +131,6 @@ const HerbNewForm = () => {
                         required
                     />
                     <br/>
-                    <label htmlFor='stock'>Stock:</label>
                     <input
                         id='stock'
                         value={herb.stock}
@@ -126,7 +140,7 @@ const HerbNewForm = () => {
                         required
                     />
                     <br/>
-                    <label htmlFor='tea'>Tea:</label>
+                    <label htmlFor='tea'>Tea: </label>
                     <input
                         id='tea'
                         name='tea'
@@ -136,20 +150,20 @@ const HerbNewForm = () => {
                         // required
                     />
                     <br/>
-                    <label htmlFor='poisonous'>Poisonous:</label>
+                    <label htmlFor='poisonous'>Poisonous: </label>
                     <input
                         id='poisonous'
                         name='poisonous'
                         type='checkbox'
                         onChange={handleCheckBox}
                         checked={herb.poisonous}
-                        required
+                        
                     />
                     <br/>
                     <br/>
                     <button type='submit'>Add to Apothecary</button>
                     <Link to={`/herbs`}>
-                        <button>Nevermind</button>
+                        <button>Back</button>
                     </Link>
                 </fieldset>
             </form>
