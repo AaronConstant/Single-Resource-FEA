@@ -12,7 +12,7 @@ const Show = () => {
 
     const handleDelete = async () => {
         try {
-            const response = await fetch(`${API}/herbs/${id}`, {
+            const response = await fetch(`${API}/${id}`, {
                 method: 'DELETE',
             });
             if (response.ok) {

@@ -19,20 +19,27 @@ const HerbEditForm = () => {
         stock: 0
     })
 
-    const updateHerb = () => {
-        fetch(`${API}/${id}`, {
-            method: 'PUT',
-            body: JSON.stringify(herb),
-            headers: {
-                'Content-Type': 'application/json'
+    const updateHerb = async () => {
+        try {
+            const response = await fetch(`${API}/${id}`, {
+                method: 'PUT',
+                body: JSON.stringify(herb),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
             }
-        })
-        .then(res => res.json())
-        .then(res => {
-            navigate(`/herbs/${id}`)
-        })
-        .catch(err => console.error(err))
-    }
+            
+            const data = await response.json();
+            navigate(`/herbs/${id}`);
+            
+        } catch (error) {
+            console.error('Error updating herb:', error);
+        }
+    };
 
 
     const handleText = (e) => {
