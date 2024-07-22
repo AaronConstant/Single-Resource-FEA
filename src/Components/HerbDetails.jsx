@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import '../Styles/herbDetails.scss'
 
 
 const API = import.meta.env.VITE_API_URL
@@ -21,9 +22,16 @@ const HerbDetails = () => {
 
 
     return (
-        <div className='herb_details'>
-            { herbDetails.name }
-        </div>
+        <main className='herb_details'>
+            <p>
+            { herbDetails.name }    
+            </p>
+            <section>
+                <p>{herbDetails.astrology_sign}</p>
+                <p></p>
+                <p></p>
+            </section>
+        </main>
     )
 }
 

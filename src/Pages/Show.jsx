@@ -37,9 +37,11 @@ const Show = () => {
     return (
         <div className='show'>
             <HerbDetails />
-            <Link to="/herbs"><button>Back</button></Link>
-            <Link to={`/herbs/${id}/edit`}><button>Edit</button></Link>
-            <button onClick={showDeleteMessage}>Delete</button>
+            <div>
+                <Link to="/herbs"><button>Back</button></Link>
+                <Link to={`/herbs/${id}/edit`}><button>Edit</button></Link>
+                <button onClick={showDeleteMessage}>Delete</button>
+            </div>
 
             {confirmDeleteModal && (
                 <div className='msg-container'>
