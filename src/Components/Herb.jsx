@@ -5,15 +5,13 @@ const Herb = ({ herb, id }) => {
     return (
         <div className='herb' key={ id }>
             <p className='herb__name'>
-
-            <Link to={`/herbs/${id}`}>{herb.name}</Link>
-
+            <Link to={`/herbs/${id}`}>{ herb.name }</Link>
             </p>
-            <img className='herb__img' src={herb.pic} alt="Herb img" />
+            <img className='herb__img' src={ herb.pic } alt="Herb img" />
             <div className="herb__info-display">
-                <p>
+                {/* <p>
                 { herb.astrology_sign }    
-                </p>
+                </p> */}
                 
             </div>
         </div>
