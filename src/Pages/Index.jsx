@@ -7,8 +7,7 @@ const Index = ({ herbdata }) => {
     
     return (
         <div className='index'>
-
-            <h2 className='index__title'>Catalog</h2>
+            <h2 className='index__catalog'>Catalog</h2>
             <button className='index__filter'>FILTER</button>
             <button className='index__sort'>SORT BY</button>
             <h5 className='index__total'>{`${ herbdata ? herbdata.length : NaN } products`}</h5>
