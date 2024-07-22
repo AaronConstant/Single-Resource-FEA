@@ -24,7 +24,6 @@ const HerbNewForm = () => {
     })
 
     const addHerb = (herb) => {
-        console.log(herb)
         fetch(API, {
             method: 'POST',
             body: JSON.stringify(herb),

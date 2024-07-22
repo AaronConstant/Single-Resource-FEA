@@ -9,37 +9,32 @@ const HerbEditForm = () => {
 
     const [herb, setHerb] = useState({
         name: '',
-        date: '',
+        entry_date: '',
+        pic: '',
         nutrients: '',
-        astrology: '',
+        astrology_sign: '',
         chakra: '',
         element: '',
         tea: false,
         poisonous: false,
-        stock: 0
+        stock: ''
     })
 
     const updateHerb = async () => {
-        try {
-            const response = await fetch(`${API}/${id}`, {
-                method: 'PUT',
-                body: JSON.stringify(herb),
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            });
-            
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
+        
+        fetch(`${API}/${id}`, {
+            method: 'PUT',
+            body: JSON.stringify(herb),
+            headers: {
+                'Content-Type': 'application/json'
             }
-            
-            const data = await response.json();
-            navigate(`/herbs/${id}`);
-            
-        } catch (error) {
-            console.error('Error updating herb:', error);
-        }
-    };
+        })
+        .then(res => res.json())
+        .then(res => {
+            navigate(`/herbs/${id}`)
+        })
+        .catch(err => console.error(err))
+    }
 
 
     const handleText = (e) => {
@@ -91,6 +86,16 @@ const HerbEditForm = () => {
                         type='date'
                         onChange={handleText}
                         placeholder="Today's Date"
+                        required
+                        />
+                    <br/>
+                    <label htmlFor='pic'>Picture URL: </label>
+                    <input
+                        id='pic'
+                        value={herb.pic}
+                        type='text'
+                        onChange={handleText}
+                        placeholder="Picture URL"
                         required
                     />
                     <br/>
@@ -163,7 +168,7 @@ const HerbEditForm = () => {
                     />
                     <br/>
                     <br/>
-                    <button type='submit'>Edit Herb</button>
+                    <button type='submit'>Save Changes</button>
                     <Link to={`/herbs/${id}`}>
                         <button>Back</button>
                     </Link>
