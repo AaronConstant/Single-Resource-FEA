@@ -2,7 +2,12 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 3em;
+    height: 2.25em;
     margin-bottom: 10px;
     background-color: tan;
+}
+
+.header__title {
+    font-size: small;
+    font-weight: 300;
 }

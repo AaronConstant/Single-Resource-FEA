@@ -1,5 +1,9 @@
 .herbs {
     display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    margin-top: 11px;
     margin-left: 50px;
-    gap: 100px
+    column-gap: 45px;
+    row-gap: 100px;
 }

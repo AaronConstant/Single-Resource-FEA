@@ -6,9 +6,9 @@ import '../Styles/index.scss'
 const Index = () => {
     return (
         <div className='index'>
-            <h2 className='index__title'>APOTHECARY</h2>
-            <button className='index__filter'><IoFilter className='filter_icon'/>FILTER</button>
-            <button className='index__sort'>SORT BY<IoIosArrowDown className='sort_arrow'/></button>
+            <h2 className='index__title'>Apothecary</h2>
+            <button className='index__filter'><IoFilter className='filter_icon'/>Filter</button>
+            <button className='index__sort'>Sort By<IoIosArrowDown className='sort_arrow'/></button>
             <h5 className='index__total'>3 products</h5>
             <Herbs className='index__products'/>
         </div>
