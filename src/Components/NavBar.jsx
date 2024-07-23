@@ -72,7 +72,7 @@ const NavBar = ({ herbdata }) => {
             <ul>
                 {/* <li><GiHamburgerMenu className='navbar_hamburger'/></li> */}
                 {/* <li><BsCurrencyExchange className='navbar_converter'/></li> */}
-                <li className='navbar_logo'><Link to='/'>AM APOTHECARY</Link></li>
+                <li className='navbar_logo'><Link to='/'>HerbaLog</Link></li>
                 {/* <li><Link to ='/herbs/studies'>Medicinal Studies</Link></li> */}
                 <li><Link to='/herbs/new'><GiMonsteraLeaf className='navbar_new'/></Link></li>
                 <li><Link to='/herbs/login'><GoPersonFill className='navbar_login'/></Link></li>

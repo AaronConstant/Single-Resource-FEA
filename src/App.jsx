@@ -13,12 +13,13 @@ import Edit from './Pages/Edit'
 import FourOFour from './Pages/FourOFour'
 import Header from './Components/Header'
 import NavBar from './Components/NavBar'
+import Footer from './Components/Footer'
 
 
+const API = import.meta.env.VITE_API_URL
 
 function App() {
   const [herbdata, setHerbData] = useState()
-  const API = import.meta.env.VITE_API_URL
 
   useEffect(() => {
     fetch(API)
@@ -26,8 +27,6 @@ function App() {
     .then(res => {setHerbData(res)})
     .catch(err => console.log(err))
 }, [])
-
-
 
 
   return (
@@ -46,6 +45,7 @@ function App() {
           <Route path='/herbs/:id/edit' element={<Edit/>}/> 
           <Route path='*' element={<FourOFour/>}/> 
         </Routes>
+        <Footer/>
       </div>
   )
 }

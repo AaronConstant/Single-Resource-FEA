@@ -1,9 +1,10 @@
 import HerbNewForm from '../Components/HerbNewForm'
+import '../Styles/new.scss'
 
 
 const New = () => {
     return (
-        <div>
+        <div className='new'>
             <HerbNewForm />
         </div>
     )

@@ -62,7 +62,7 @@ const HerbNewForm = () => {
                 <fieldset>
                     <legend>New Herb</legend>
                     <label htmlFor='name'>Name:</label>
-                    <input
+                    <input  
                         id='name'
                         value={herb.name}
                         type='text'
@@ -147,7 +147,7 @@ const HerbNewForm = () => {
                         type='checkbox'
                         onChange={handleCheckBox}
                         checked={herb.tea}
-                        // required
+                        required
                     />
                     <br/>
                     <label htmlFor='poisonous'>Poisonous: </label>
@@ -157,11 +157,11 @@ const HerbNewForm = () => {
                         type='checkbox'
                         onChange={handleCheckBox}
                         checked={herb.poisonous}
-                        
+                        required
                     />
                     <br/>
                     <br/>
-                    <button type='submit'>Add to Apothecary</button>
+                    <button type='submit' className='mui-btn mui-btn--raised'>Add to Apothecary</button>
                     <Link to={`/herbs`}>
                         <button>Back</button>
                     </Link>
