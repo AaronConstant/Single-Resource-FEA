@@ -25,5 +25,10 @@
 }
 
 .show {
+    display: grid;
     border: 2px solid black;
+    height:auto;
+    width: 40%;
+    margin: 0 auto;
+    height: 100%;
 }

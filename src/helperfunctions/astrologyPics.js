@@ -1,4 +1,4 @@
-const findAstrologyPic = (zodiacSign) => {
+ export const findAstrologyPic = (zodiacSign) => {
     const zodiacSigns = [
         {   
             name: "Aries",
@@ -30,7 +30,7 @@ const findAstrologyPic = (zodiacSign) => {
         },  
         {   
             name: "Scorpio",
-            imageUrl: "https://upload.wikimedia.org/wikipedia/commons/0/02/Scorpio.svg"
+            imageUrl: "https://www.usatoday.com/gcdn/presto/2022/10/04/USAT/1f3dd28e-0265-4e54-970a-e17a7e5a22ca-Scorpio.jpg?width=1200&disable=upscale&format=pjpg&auto=webp"
         },  
         {   
             name: "Sagittarius",
@@ -50,9 +50,8 @@ const findAstrologyPic = (zodiacSign) => {
         }
         ];
 
-        zodiacSigns.filter(sign => {
-            if(sign)
-        })
+        const sign = zodiacSigns.find(sign => sign.name.toLowerCase() === zodiacSign.toLowerCase());
+        return sign ? sign.imageUrl : null;
 
 
 }
