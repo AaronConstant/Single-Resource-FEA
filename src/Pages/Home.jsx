@@ -7,7 +7,8 @@ const Home = () => {
     
     return (
         <main>
-            <img className='home_image' src={ homeImage } alt='lush farm, farmhouse, and sunrise from the East'/>
+            <img className='home_image' src={ homeImage } alt='farmhouse'/>
+            Welcome to Herbalog
             <button className='home_btn'><Link to='/herbs'>Browse Herbs</Link></button>
         </main>
     )
