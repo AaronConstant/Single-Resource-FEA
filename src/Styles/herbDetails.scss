@@ -5,23 +5,51 @@
 }
 
 .herb_details {
-    display: grid;
+    background: rgb(238,194,174);
+    background: radial-gradient(circle, rgba(238,194,174,0.7972972972972973) 0%, rgba(226,233,148,1) 100%);    display: grid;
     grid-template-columns:auto;
     grid-template-rows: auto;
-    border: 2px solid rgb(216, 83, 83);
+    border-radius: 25px;
 
     &__name {
         font-size: 50px;
         font-family: fantasy;
         text-align: center;
-        padding: 10px;
-        
-
+        padding-top: 30px;
     }
+
+    hr {
+        height: 6px;
+        background: rgb(96, 68, 15);
+        width: 50%;
+        justify-self: center;
+    }
+
     &__zodiac-img { 
         height: 80px;
         width: 90px;
         border-radius: 80%;
+    }
+
+    &__sign {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+
+        .sign-name {
+            justify-content: center;
+            align-items: center;
+            margin-left: 15px;
+
+        }
+    }
+    .info {
+        margin: 10px;
+        padding: 10px;
+    }
+    .value {
+        padding: 10px;
     }
 
 }
