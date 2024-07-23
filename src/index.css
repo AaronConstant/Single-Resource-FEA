@@ -4,4 +4,6 @@
   box-sizing: border-box;
   font-family: Lato;
   background-color: rgb(234, 225, 213);
+    --animate-duration: 800ms;
+    --animate-delay: 0.9s;
 }

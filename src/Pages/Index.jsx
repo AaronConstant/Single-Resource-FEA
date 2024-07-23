@@ -23,7 +23,7 @@ const Index = ({herbdata}) => {
     return (
         <div className='index'>
 
-            <h2 className='index__title'>Herbalog</h2>
+            <h2 className='animate__animated animate__fadeIn'>Herbalog</h2>
             <div className='index__views'>
             <button className='index__filter'>Sort</button>
             {/* <button className='index__sort'>Sort By</button> */}
