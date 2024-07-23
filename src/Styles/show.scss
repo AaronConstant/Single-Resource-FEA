@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1000;
+    z-index: 50;
 
     .msg-container__message {
         background: white;
@@ -21,5 +21,38 @@
     .msg-container__message button {
         margin: 5px;
         padding: 10px 20px;
+        color: aqua;
+    }
+}
+
+.show {
+    display: grid;
+    border: 2px solid black;
+    border-radius: 25px;
+    height:auto;
+    width: 40%;
+    margin: 0 auto;
+    height: 100%;
+    background: rgb(118, 29, 29);
+
+    &__buttons {
+        display: flex;
+        gap: 10px;
+        justify-content: space-evenly;
+        padding: 10px;
+
+        button {
+            color: white;
+            width: 70px;
+            height: 30px;
+            border-radius: 20px;
+            border: none;
+            background-color: rgb(22, 14, 14);
+            cursor: pointer;
+
+        button:hover {
+            background: gray;
+        }
+        }
     }
 }

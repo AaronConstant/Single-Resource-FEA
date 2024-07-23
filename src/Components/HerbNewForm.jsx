@@ -58,7 +58,7 @@ const HerbNewForm = () => {
 
     return (
         <div className='new'>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={ handleSubmit }>
                 <fieldset>
                     <legend>New Herb</legend>
                     <label htmlFor='name'>Name:</label>
