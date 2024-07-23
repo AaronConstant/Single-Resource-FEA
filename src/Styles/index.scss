@@ -1,83 +1,93 @@
 .index {
     border-top: 1px solid rgb(244, 238, 231);
-    background: rgb(196, 123, 35);
-    background: linear-gradient(0deg, rgba(141, 88, 23, 0) 87%, rgba(221, 145, 69, 0.839) 100%);
+    background-image: url(https://thumbs.dreamstime.com/b/rustic-wood-planks-background-nice-studio-lighting-elegant-vignetting-to-draw-attention-56200999.jpg?w=768);
+    background-repeat: no-repeat;
+    background-size: cover;
+    // background: rgb(196, 123, 35);
+    // background: linear-gradient(0deg, rgba(141, 88, 23, 0) 87%, rgb(165 106 48) 100%);
 }
 .index__catalog {
     font-size: 40px;  
-    color: rgb(66, 64, 64);
-    margin-left: 38px;
-    text-align: center;
+    color: rgb(238, 230, 230);
+    margin: 44px 0 20px 100px;
+    font-family: Lato;
 }
 
 .index__filter {
-    margin-top: 10px;
-    margin-left: 40%;
     padding: 10px 45px;
     border-radius: 2em;
     border: none;
-    background-color: tan;
+    background-color: rgb(165 106 48);
     color: white;
     text-transform: uppercase;
     cursor: pointer;
-    // transition: box-shadow 0.2s ease;
+    align-self: start;
+    margin-left: 100px;
 }
 
 .index__filter:hover {
-    background-image: linear-gradient(90deg, white 0%, silver 100%);
-    // animation: slidebg 2s linear infinite;    
-    // text-shadow: 0 0 5px #ff0000; 
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
+    background-image: linear-gradient(45deg, white 0%, silver 49%, tan);
+    animation: slidebg 1s ease-in-out;
 }
 
-.index__filter {
-    width: 200px;
-    border-radius: 5px;
-    background-color: #F4F200;
-    background-image: #F4F200;
-    background-image: -moz-linear-gradient(top, #fff 0%, #F4F200 100%); 
-    background-image: -webkit-linear-gradient(top, #fff 0%,#F4F200 100%); 
-    background-image: linear-gradient(to bottom, #fff 0%,#F4F200 100%); 
-    background-size: 300px;
-    background-repeat: no-repeat;
-    background-position: 0%;
-    -webkit-transition: background 300ms ease-in-out;
-    transition: background 300ms ease-in-out;
+@keyframes slidebg {
+    from {
+        background-position: -200px;
+    }
+    to {
+      background-position: 200px;
+    }
   }
-  .index__filter:hover {
-    background-position: -200%;
-    transition: background 300ms ease-in-out;
-  }
-
 
 
 .index__sort {
-    margin-left: 28px;
     padding: 10px 60px;
     border-radius: 2em;
-    border: none;
+    border: 1px solid rgb(165 106 48);
     color: rgb(56, 52, 52);
     text-transform: uppercase;
+    background-color: transparent;
     cursor: pointer;
+    margin-left: 20px;
 }
 
-
-
 .index__total {
-    margin-left: 50px;
-    color: gray;
+    color: white;
     font-weight: 400;
-    font-size: 18px;
-    letter-spacing: .15rem;
+    font-size: 14px;
+    letter-spacing: .015rem;
+    margin-left: 100px;
+    margin-top: 20px;
 }
 
 .index__products {
     margin-left: 30px;
 }
 
-.sort_arrow {
-    text-align: right;
+
+.index__views {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    
+}
+
+.grid_view {
+    margin-left: 800px;
+    font-size: 25px;
+    color: rgb(238, 230, 230)
+}
+
+.list_view {
+    margin-left: 40px;
+    font-size: 25px;
+    color: rgb(238, 230, 230)
+}
+
+.two-column {
+
+}
+
+.three-column {
 
 }
