@@ -3,8 +3,7 @@
     background-image: url(https://thumbs.dreamstime.com/b/rustic-wood-planks-background-nice-studio-lighting-elegant-vignetting-to-draw-attention-56200999.jpg?w=768);
     background-repeat: no-repeat;
     background-size: cover;
-    // background: rgb(196, 123, 35);
-    // background: linear-gradient(0deg, rgba(141, 88, 23, 0) 87%, rgb(165 106 48) 100%);
+    z-index: -1;
 }
 .index__catalog {
     font-size: 40px;  
@@ -15,7 +14,7 @@
 
 .animate__animated.animate__fadeIn {
     --animate-duration: 2s;
-  }
+}
 
 .index__filter {
     padding: 10px 45px;
@@ -39,9 +38,9 @@
         background-position: -200px;
     }
     to {
-      background-position: 200px;
+        background-position: 200px;
     }
-  }
+}
 
 
 .index__sort {
@@ -70,6 +69,7 @@
 
 
 .index__views {
+    margin: 40px;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -77,21 +77,21 @@
 }
 
 .grid_view {
-    margin-left: 800px;
+    margin-left: 1400px;
     font-size: 25px;
     color: rgb(238, 230, 230)
 }
 
 .list_view {
     margin-left: 40px;
-    font-size: 25px;
+    font-size: 30px;
     color: rgb(238, 230, 230)
 }
 
-.two-column {
+// .two-column {
 
-}
+// }
 
-.three-column {
+// .three-column {
 
-}
+// }

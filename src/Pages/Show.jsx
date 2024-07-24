@@ -32,9 +32,11 @@ const Show = () => {
     const confirmingDeletion = () => {
         handleDelete();
         setConfirmDeleteModal(false);
+        navigate('/herbs')
     };
 
     return (
+        <div className='show-container'>
         <div className='show'>
             <HerbDetails />
             <div className='show__buttons'>
@@ -52,6 +54,7 @@ const Show = () => {
                     </div>
                 </div>
             )}
+        </div>
         </div>
     );
 };
