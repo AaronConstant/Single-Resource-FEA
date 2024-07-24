@@ -7,7 +7,8 @@
     width: 14%;
     box-shadow: 4px 4px 14px 0px rgb(2, 2, 1);
     
-    &__name {
+    &__name a {
+        color: black;
         padding: 10px;
         font-size: 26px;
         font-family: fantasy;
