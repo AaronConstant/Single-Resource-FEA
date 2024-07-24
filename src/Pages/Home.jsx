@@ -14,8 +14,7 @@ const Home = () => {
             <img src={ Basil } alt="" className='home-container__first-pic'/>
             <div className='home-container__combined-details-one'>
               <h2>WELCOME TO HERBALOG</h2>
-            <p className='first-details'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla odio nobis fuga ea, autem ullam ratione voluptas et. Quasi tempore asperiores fuga in expedita veniam porro nam magnam eos dicta?
-            Reiciendis quibusdam eveniet magnam animi ex officia quaerat quasi at quidem repudiandae sed doloribus possimus cumque dolore, sunt commodi amet, magni rem nostrum, ipsum repellat vitae obcaecati. Unde, sit nihil.
+            <p className='first-details'>Our website is designed to be a comprehensive resource for herbal enthusiasts, providing detailed information about each herb's benefits, uses, and preparation methods. We are passionate about educating our community on the healing properties of plants and how to integrate them into modern living. From beginners to seasoned herbalists, HerbaLog is here to support your journey with trusted products, insightful guidance, and a commitment to promoting a natural and healthy way of life. Explore our collections and discover how HerbaLog can be your partner in holistic health.
             </p>
             </div>
 
