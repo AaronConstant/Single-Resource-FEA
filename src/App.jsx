@@ -16,7 +16,7 @@ import NavBar from './Components/NavBar'
 import Footer from './Components/Footer'
 
 
-const API = import.meta.env.VITE_API_URL
+const API = import.meta.env.VITE_BASE_URL
 
 function App() {
   const [herbdata, setHerbData] = useState()

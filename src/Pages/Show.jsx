@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Link, useParams, useNavigate } from 'react-router-dom'
 import '../Styles/show.scss'
 
-const API = import.meta.env.VITE_API_URL
+const API = import.meta.env.VITE_BASE_URL
 
 const Show = () => {
     const navigate = useNavigate();
