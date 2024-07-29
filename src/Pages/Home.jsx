@@ -12,7 +12,6 @@ const Home = () => {
     return (
         <main>
             <button className='home_btn'><Link to='/herbs'>Browse Herbs</Link></button>
-    
             <MDBCarousel showControls showIndicators>
         <MDBCarouselItem itemId={1}>
         <img src={Basil} className='d-block w-100' alt='basil' />

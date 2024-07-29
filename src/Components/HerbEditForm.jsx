@@ -24,7 +24,7 @@ const HerbEditForm = () => {
         
         fetch(`${API}/${id}`, {
             method: 'PUT',
-            body: JSON.stringify(herb),
+            body: JSON.stringify(herb),y6
             headers: {
                 'Content-Type': 'application/json'
             }

@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+PRODID:-//Splash Event Planning System
+VERSION:2.0
+METHOD:PUBLISH
+BEGIN:VEVENT
+DTSTAMP:20240723T232541Z
+UID:1b29119dbc52dbb4b7e03a0f37fd4681b72d9c2e@employerbrand.d
+ atadoghq.com/lessonsinlosing
+URL:http://employerbrand.datadoghq.com/lessonsinlosing
+DTSTART:20240724T220000Z
+DTEND:20240725T000000Z
+ORGANIZER;CN="Rebecca Antwi":mailto:employerbrandevents@data
+ doghq.com
+SUMMARY:Datadog x Techqueria Networking Night!
+DESCRIPTION:For more information - http://employerbrand.data
+ doghq.com/lessonsinlosing
+LOCATION:NYT Building 620 8th Avenue New York NY 10018
+END:VEVENT
+END:VCALENDAR
