@@ -2,9 +2,10 @@
 // @import url('https://fonts.googleapis.com/css2?family=Playwrite+CU&family=Playwrite+CZ:wght@100..400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Playwrite+CU&family=Playwrite+CZ:wght@100..400&display=swap');
 nav {
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 10px 0 10px 10px;
+    padding: 10px;
     height: 5.5em;
     position: relative;
     list-style-type: none;
@@ -17,7 +18,7 @@ ul {
     justify-content: center;
     align-items: center;
     padding: 0;
-    width: 100vw;
+    // width: 100vw;
     position: relative;
 }
 
@@ -29,17 +30,19 @@ a {
 a:hover {
     color: gray;
 }
+
 .searchbar {
     list-style-type: none;
     position: absolute;
 }
+
 .navbar_hamburger {
     margin-right: 20px;
     cursor: pointer;
 }
 
 .navbar_search {
-    margin-left: 30px;
+    // margin-left: 30px;
     cursor: pointer;
     margin-top: 20px;
 }
@@ -50,20 +53,20 @@ a:hover {
 // }
 
 .navbar_new {
-    margin-left: 550px;
+    // margin-left: 550px;
 }
 
 .navbar_login {
-    margin-left: 20px;
+    // margin-left: 20px;
 }
 
 .navbar_cart {
-    margin-left: 20px;
+    // margin-left: 20px;
 }
 
 .navbar_logo {
     font-size: 20px;
-    margin-left: 450px;
+    // margin-left: 450px;
 }
 
 .navbar_trademark {
@@ -84,7 +87,7 @@ a:hover {
 }
 
 .input-view {
-    // margin-left: 34%;
+    margin-left: 34%;
     position: absolute;
     left: 64px;
     bottom: 32px;

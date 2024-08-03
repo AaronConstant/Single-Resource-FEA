@@ -14,6 +14,7 @@ import FourOFour from './Pages/FourOFour'
 import Header from './Components/Header'
 import NavBar from './Components/NavBar'
 import Footer from './Components/Footer'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const API = import.meta.env.VITE_API_URL

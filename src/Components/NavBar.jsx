@@ -39,10 +39,9 @@ const NavBar = ({ herbdata }) => {
         setSearchView(prevSearchView => !prevSearchView);
     };
 
-
     return (
         <nav>
-                <li><FaSearch className='navbar_search' onClick={toggleSearchView}/>
+            <div><FaSearch className='navbar_search' onClick={toggleSearchView}/>
                 
                 <input
                 type="text"
@@ -51,8 +50,8 @@ const NavBar = ({ herbdata }) => {
                 onChange={handleSearchInput}
                 className="input-view"
                 style={{ display: searchview ? 'none' : 'block' }}
-            />
-           <div className='search-results' style={{ display: searchview ? 'none' : 'block'}}>
+                />
+                <div className='search-results' style={{ display: searchview ? 'none' : 'block'}}>
                     {filtereddata && filtereddata.length > 0 && searchEntry ? (
                         <section style={{ padding: searchview ? '0px' : '10px' }}>
                         {filtereddata.map((herb, idx) => (
@@ -61,18 +60,17 @@ const NavBar = ({ herbdata }) => {
                         
                             </Link> 
                         ))}
-                    </section>
+                        </section>
                     ) : (
-
                         undefined
                     )}
                 </div>
                 
-                </li>
+            </div>
+            <h3 className='navbar_logo'><Link to='/'>HerbaLog</Link></h3>
             <ul>
                 {/* <li><GiHamburgerMenu className='navbar_hamburger'/></li> */}
                 {/* <li><BsCurrencyExchange className='navbar_converter'/></li> */}
-                <li className='navbar_logo'><Link to='/'>HerbaLog</Link></li>
                 {/* <li><Link to ='/herbs/studies'>Medicinal Studies</Link></li> */}
                 <li><Link to='/herbs/new'><GiMonsteraLeaf className='navbar_new'/></Link></li>
                 <li><Link to='/herbs/login'><GoPersonFill className='navbar_login'/></Link></li>
