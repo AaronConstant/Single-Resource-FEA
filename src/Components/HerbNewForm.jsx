@@ -3,7 +3,7 @@ import { useNavigate, Link, useParams } from 'react-router-dom'
 import { v4 as uuidv4 } from 'uuid'
 import '../Styles/new.scss'
 
-const API = import.meta.env.VITE_API_URL
+const API = import.meta.env.VITE_BASE_URL
 
 const HerbNewForm = () => {
     const navigate = useNavigate()

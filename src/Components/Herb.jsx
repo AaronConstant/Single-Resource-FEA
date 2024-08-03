@@ -4,7 +4,7 @@ import '../Styles/herb.scss'
 const Herb = ({ herb, id }) => {
     return (
         <div className='herb' key={ id }>
-            <p className='herb__name'>
+            <p className='herb__name' style={{color: 'black'}}>
             <Link to={`/herbs/${id}`}>{ herb.name }</Link>
             </p>
             <img className='herb__img' src={ herb.pic } alt="Herb img" />

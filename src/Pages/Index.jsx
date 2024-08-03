@@ -6,7 +6,7 @@ import { TfiLayoutGrid4Alt } from 'react-icons/tfi'
 import { TfiLayoutListThumb } from 'react-icons/tfi'
 import '../Styles/index.scss'
 
-const API = import.meta.env.VITE_API_URL
+const API = import.meta.env.VITE_BASE_URL
 
 const Index = ({herbdata}) => {
     const [total, setTotal] = useState(0)
