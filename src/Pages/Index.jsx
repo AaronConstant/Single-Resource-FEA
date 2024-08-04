@@ -6,7 +6,7 @@ import { TfiLayoutGrid4Alt } from 'react-icons/tfi'
 import { TfiLayoutListThumb } from 'react-icons/tfi'
 import '../Styles/index.scss'
 
-const API = import.meta.env.VITE_API_URL
+const API = import.meta.env.VITE_BASE_URL
 
 const Index = ({herbdata}) => {
     const [total, setTotal] = useState(0)
@@ -23,7 +23,11 @@ const Index = ({herbdata}) => {
     return (
         <div className='index'>
 
+<<<<<<< HEAD
             <h2 className='catalog animate__animated animate__fadeIn'>Herbalog</h2>
+=======
+            {/* <h2 className='animate__animated animate__fadeIn'>Herbalog</h2> */}
+>>>>>>> bb97818e211ccf7062883179f776b4354de3e729
             <div className='index__views'>
             <button className='index__filter'>Sort</button>
             {/* <button className='index__sort'>Sort By</button> */}

@@ -17,7 +17,7 @@ import Footer from './Components/Footer'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-const API = import.meta.env.VITE_API_URL
+const API = import.meta.env.VITE_BASE_URL
 
 function App() {
   const [herbdata, setHerbData] = useState()

@@ -1,16 +1,33 @@
-// @import url('https://fonts.googleapis.com/css2?family=Playwrite+CU&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Playwrite+CU&family=Playwrite+CZ:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Playwrite+CU&family=Playwrite+CZ:wght@100..400&display=swap');
+
 nav {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    height: 5.5em;
     position: relative;
+    height: 6.5em;
     list-style-type: none;
     border-bottom: 1px solid rgb(210, 180, 140);
-}
+  }
+  
+  #background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:cover; 
+    z-index: 1;
+    
+  }
+  
+  .nav-content {
+    position: relative;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 10px; 
+  }
 
 ul {
     list-style-type: none;
@@ -24,7 +41,8 @@ ul {
 
 a {
     text-decoration: none;
-    color: black;
+    color: rgb(221, 225, 9);
+
 }
 
 a:hover {
@@ -42,31 +60,31 @@ a:hover {
 }
 
 .navbar_search {
-    // margin-left: 30px;
+    color: white;
+    font-size: 20px;
+    margin-left: 30px;
     cursor: pointer;
     margin-top: 20px;
 }
 
-// .navbar_converter {
-//     margin-right: 290px;
-//     cursor: pointer;
-// }
-
-.navbar_new {
-    // margin-left: 550px;
+#navbar_new {
+    margin-left: 550px;
 }
 
-.navbar_login {
-    // margin-left: 20px;
+#navbar_login {
+    margin-left: 20px;
 }
 
-.navbar_cart {
-    // margin-left: 20px;
+#navbar_cart {
+    margin-left: 20px;
 }
 
-.navbar_logo {
-    font-size: 20px;
-    // margin-left: 450px;
+#navbar_logo {
+    font-family: 'Edu AU VIC WA NT Hand';
+    font-size: 50px;
+    margin-left: 600px;
+    font-weight: 500;
+    color: black;
 }
 
 .navbar_trademark {
@@ -80,16 +98,21 @@ a:hover {
     text-align: center;
     width: auto;
     border-radius: 10px;
-    background: white;
+    background: rgb(170, 165, 165);
     position: absolute;
-    box-shadow: 4px 4px 4px 1px rgb(210, 180, 140);
-    z-index: 1;
+    // box-shadow: 4px 4px 4px 1px rgb(210, 180, 140);
+    margin-left: 70px;
 }
 
 .input-view {
     margin-left: 34%;
     position: absolute;
-    left: 64px;
-    bottom: 32px;
+    left: 74px;
+    bottom: 34px;
     z-index: 1;
+    height: 20px;
+}
+
+#seperate-links {
+    color: black;
 }

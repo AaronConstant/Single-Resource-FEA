@@ -4,7 +4,7 @@ import '../Styles/herbDetails.scss'
 import  { findAstrologyPic } from '../helperfunctions/astrologyPics'
 
 
-const API = import.meta.env.VITE_API_URL
+const API = import.meta.env.VITE_BASE_URL
 
 const HerbDetails = () => {
     const { id } = useParams()

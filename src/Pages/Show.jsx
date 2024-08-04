@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Link, useParams, useNavigate } from 'react-router-dom'
 import '../Styles/show.scss'
 
-const API = import.meta.env.VITE_API_URL
+const API = import.meta.env.VITE_BASE_URL
 
 const Show = () => {
     const navigate = useNavigate();
@@ -32,9 +32,11 @@ const Show = () => {
     const confirmingDeletion = () => {
         handleDelete();
         setConfirmDeleteModal(false);
+        navigate('/herbs')
     };
 
     return (
+        <div className='show-container'>
         <div className='show'>
             <HerbDetails />
             <div className='show__buttons'>
@@ -52,6 +54,7 @@ const Show = () => {
                     </div>
                 </div>
             )}
+        </div>
         </div>
     );
 };

@@ -7,6 +7,7 @@ import { FaShoppingCart } from 'react-icons/fa'
 import { GiMonsteraLeaf } from 'react-icons/gi'
 import { BsCurrencyExchange } from 'react-icons/bs'
 import '../Styles/navbar.scss'
+import videoBg from '../assets/RiverFlow.mp4'
 
 
 const NavBar = ({ herbdata }) => {
@@ -31,41 +32,55 @@ const NavBar = ({ herbdata }) => {
             );
             setFilteredData(newFilteredData);
         } else {
-            setFilteredData('');
+            setFilteredData('Not Found');
         }
     };
 
     const toggleSearchView = () => {
-        setSearchView(prevSearchView => !prevSearchView);
+        setSearchView( prevSearchView => !prevSearchView );
     };
 
     return (
         <nav>
+<<<<<<< HEAD
             <div><FaSearch className='navbar_search' onClick={toggleSearchView}/>
                 
+=======
+            <div>
+                <video autoPlay muted loop id="background-video">
+                <source src={ videoBg } type="video/mp4" />
+                </video>
+            </div>
+            <div className='nav-content'>
+                <li><FaSearch className='navbar_search' onClick={toggleSearchView}/>                
+>>>>>>> bb97818e211ccf7062883179f776b4354de3e729
                 <input
                 type="text"
                 placeholder="Find herb..."
-                value={searchEntry}
-                onChange={handleSearchInput}
+                value={ searchEntry }
+                onChange={ handleSearchInput }
                 className="input-view"
                 style={{ display: searchview ? 'none' : 'block' }}
                 />
                 <div className='search-results' style={{ display: searchview ? 'none' : 'block'}}>
                     {filtereddata && filtereddata.length > 0 && searchEntry ? (
-                        <section style={{ padding: searchview ? '0px' : '10px' }}>
+                        <div style={{ padding: searchview ? '0px' : '10px'}}>
                         {filtereddata.map((herb, idx) => (
                             <Link to={`/herbs/${herb.id}`} onClick={searchview == false} key={idx}>
                             <p key={herb.id}>{herb.name}</p>
-                        
                             </Link> 
                         ))}
+<<<<<<< HEAD
                         </section>
+=======
+                    </div>
+>>>>>>> bb97818e211ccf7062883179f776b4354de3e729
                     ) : (
                         undefined
                     )}
                 </div>
                 
+<<<<<<< HEAD
             </div>
             <h3 className='navbar_logo'><Link to='/'>HerbaLog</Link></h3>
             <ul>
@@ -75,7 +90,16 @@ const NavBar = ({ herbdata }) => {
                 <li><Link to='/herbs/new'><GiMonsteraLeaf className='navbar_new'/></Link></li>
                 <li><Link to='/herbs/login'><GoPersonFill className='navbar_login'/></Link></li>
                 <li><Link to='/herbs/cart'><FaShoppingCart className='navbar_cart'/></Link></li>
+=======
+                </li>
+            <ul id='seperate-links'>
+
+            <li id='navbar_logo' style={{ color: 'black', fontWeight: 'bold' }}><Link to='/'>HerbaLog</Link></li>                <li><Link to='/herbs/new'><GiMonsteraLeaf id='navbar_new'/></Link></li>
+                <li><Link to='/herbs/login'><GoPersonFill id='navbar_login'/></Link></li>
+                <li><Link to='/herbs/cart'><FaShoppingCart id='navbar_cart'/></Link></li>
+>>>>>>> bb97818e211ccf7062883179f776b4354de3e729
             </ul>
+            </div>
         </nav>
     )
 }
