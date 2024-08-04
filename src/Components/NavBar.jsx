@@ -42,10 +42,6 @@ const NavBar = ({ herbdata }) => {
 
     return (
         <nav>
-<<<<<<< HEAD
-            <div><FaSearch className='navbar_search' onClick={toggleSearchView}/>
-                
-=======
             <div>
                 <video autoPlay muted loop id="background-video">
                 <source src={ videoBg } type="video/mp4" />
@@ -53,7 +49,6 @@ const NavBar = ({ herbdata }) => {
             </div>
             <div className='nav-content'>
                 <li><FaSearch className='navbar_search' onClick={toggleSearchView}/>                
->>>>>>> bb97818e211ccf7062883179f776b4354de3e729
                 <input
                 type="text"
                 placeholder="Find herb..."
@@ -70,34 +65,18 @@ const NavBar = ({ herbdata }) => {
                             <p key={herb.id}>{herb.name}</p>
                             </Link> 
                         ))}
-<<<<<<< HEAD
-                        </section>
-=======
                     </div>
->>>>>>> bb97818e211ccf7062883179f776b4354de3e729
                     ) : (
                         undefined
                     )}
                 </div>
                 
-<<<<<<< HEAD
-            </div>
-            <h3 className='navbar_logo'><Link to='/'>HerbaLog</Link></h3>
-            <ul>
-                {/* <li><GiHamburgerMenu className='navbar_hamburger'/></li> */}
-                {/* <li><BsCurrencyExchange className='navbar_converter'/></li> */}
-                {/* <li><Link to ='/herbs/studies'>Medicinal Studies</Link></li> */}
-                <li><Link to='/herbs/new'><GiMonsteraLeaf className='navbar_new'/></Link></li>
-                <li><Link to='/herbs/login'><GoPersonFill className='navbar_login'/></Link></li>
-                <li><Link to='/herbs/cart'><FaShoppingCart className='navbar_cart'/></Link></li>
-=======
                 </li>
             <ul id='seperate-links'>
 
             <li id='navbar_logo' style={{ color: 'black', fontWeight: 'bold' }}><Link to='/'>HerbaLog</Link></li>                <li><Link to='/herbs/new'><GiMonsteraLeaf id='navbar_new'/></Link></li>
                 <li><Link to='/herbs/login'><GoPersonFill id='navbar_login'/></Link></li>
                 <li><Link to='/herbs/cart'><FaShoppingCart id='navbar_cart'/></Link></li>
->>>>>>> bb97818e211ccf7062883179f776b4354de3e729
             </ul>
             </div>
         </nav>
