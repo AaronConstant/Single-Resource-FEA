@@ -4,7 +4,7 @@ import Herb from './Herb'
 import '../Styles/herbcardlayout.scss'
 
 
-const API = import.meta.env.VITE_API_URL
+const API = import.meta.env.VITE_BASE_URL
 
 const Herbs = () => {
     const [herbs, setHerbs] = useState([])
