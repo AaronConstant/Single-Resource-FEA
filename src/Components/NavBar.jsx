@@ -61,8 +61,8 @@ const NavBar = ({ herbdata }) => {
                     {filtereddata && filtereddata.length > 0 && searchEntry ? (
                         <div style={{ padding: searchview ? '0px' : '10px'}}>
                         {filtereddata.map((herb, idx) => (
-                            <Link to={`/herbs/${herb.id}`} onClick={searchview == false} key={idx}>
-                            <p key={herb.id}>{herb.name}</p>
+                            <Link to={`/herbs/${herb.id}`} onClick={ searchview == false } key={ idx }>
+                            <p key= { herb.id } > { herb.name } </p>
                             </Link> 
                         ))}
                     </div>
