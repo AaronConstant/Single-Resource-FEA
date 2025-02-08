@@ -12,7 +12,7 @@ const Index = ({herbdata}) => {
     const [total, setTotal] = useState(0)
 
     useEffect(() => {
-        fetch(`${API}`)
+        fetch(`${API}/herbs`)
         .then(res => res.json())
         .then(res => {
             setTotal(res.length)

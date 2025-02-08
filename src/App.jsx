@@ -23,7 +23,7 @@ function App() {
   const [herbdata, setHerbData] = useState()
 
   useEffect(() => {
-    fetch(API)
+    fetch(`${API}/herbs`)
     .then(res => res.json())
     .then(res => {setHerbData(res)})
     .catch(err => console.log(err))
